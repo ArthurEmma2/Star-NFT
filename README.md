@@ -8,7 +8,7 @@ The Project is about creating an NFT MARKETPLACE using Tezos the following below
 the place where Contracts are available
 
 ## Smart Contract Overview
-As smart contracts on Tezos are programmed with a Turing-complete language, we can imagine and implement all kinds of rules, with the only limit being our imagination. We can create digital objects with a number of interesting properties, create very unique collectibles, or even run interesting social experiments.
+As smart contracts on Tezos are programmed with a Ligo language, we can imagine and implement all kinds of rules, with the only limit being our imagination. We can create digital objects with a number of interesting properties, create very unique collectibles, or even run interesting social experiments.
 However, as we will see, adding new features comes with some risks, potential flaws and unintended consequences.
 For example, just for fun, let’s say that we want to create an item that automatically becomes more expensive every time it is transferred. Instead of letting the owner set the price of their choice as we previously did, we will increase this price by 10% after every sale. If we start our NFT with a price of 1 tez, it will be worth 1.10 tez after one sale, 2.59 tez after 10 sales and 13780 tez after 100 sales.
 To benefit from this as the author, in case our very unique NFT gets popular, let’s make sure we get a share of these sales by adding a royalties feature: every time the NFT is sold, let’s award ourselves 5% of the sale price. We will add our own address to the storage, as the author of the NFT.
