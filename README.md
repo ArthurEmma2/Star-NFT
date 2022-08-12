@@ -1,81 +1,87 @@
-# Starnftmarketplace
+# Star NFT Marketplace
+
+The Project is about creating an NFT MARKETPLACE using Tezos the following below website link will provide Insightful Analysis 
+ link: https://starnftmarketplace.netlify.app
 
 
-The Project is about creating a NFT MARKETPLACE using Tezos the following below website link will provide Insightful Analysis 
+## Tezos Folder 
+the place where Contracts are available
 
-https://starnftmarketplace.netlify.app
+## Smart Contract Overview
+As smart contracts on Tezos are programmed with a Turing-complete language, we can imagine and implement all kinds of rules, with the only limit being our imagination. We can create digital objects with a number of interesting properties, create very unique collectibles, or even run interesting social experiments.
+However, as we will see, adding new features comes with some risks, potential flaws and unintended consequences.
+For example, just for fun, let’s say that we want to create an item that automatically becomes more expensive every time it is transferred. Instead of letting the owner set the price of their choice as we previously did, we will increase this price by 10% after every sale. If we start our NFT with a price of 1 tez, it will be worth 1.10 tez after one sale, 2.59 tez after 10 sales and 13780 tez after 100 sales.
+To benefit from this as the author, in case our very unique NFT gets popular, let’s make sure we get a share of these sales by adding a royalties feature: every time the NFT is sold, let’s award ourselves 5% of the sale price. We will add our own address to the storage, as the author of the NFT.
+
+## Smart Contract Running Instructions
+Running Instructions Tezos Node install
+
+Go to https://tezos.gitlab.io/introduction/howtoget.html and follow instructions in section "Build from sources".
+
+Launching Sandbox
+
+Go to https://tezos.gitlab.io/user/sandbox.html and follow instructions
+
+Taquito install
+
+Go to https://tezostaquito.io/docs/quick_start
+
+Ligo install
+
+Go to https://ligolang.org/docs/intro/installation
+
+Typescript Install
+
+npm install -g typescript
+Launching Tezos Node with cors
+
+./src/bin_node/tezos-sandboxed-node.sh 1 --connections 1 --cors-header='content-type' --cors-origin='*'
+Smart contract management
+
+By command line (tezos-client)
+
+deploy contract
+
+tezos-client originate contract counter transferring 1 from bootstrap5 running './counter.tz' --init "0" --burn-cap 0.351
+invoke contract
+
+tezos-client transfer 0 from bootstrap4 to counter --arg "(Right 5)" --dry-run
+retrieve storage of contract
+
+tezos-client get contract storage for counter
+Generate identity
+
+tezos-client gen keys bob
+Show identity
+
+tezos-client show address bootstrap1 -S
+With Truffle
+
+Compile contract
+
+In project folder, run:
+
+$ truffle compile
+Deploy contract
+
+In project folder, run:
+
+$ truffle migrate --network <development, carthagenet, mainnet, zeronet>
+Run tests
+
+In project folder, run in this order:
+
+$ ligo compile-contract src/entrypoints_for_helpers.mligo main > test/helpers.tz 
+$ ligo compile-contract src/land.mligo main > test/land.tz 
+$ python -m unittest
 
 
+# Techologies used for the Smart Contract
+- python
+- Ligo language
+- javascript
 
-Tezos Folder the place where Contracts are available
-
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Technologies used for the Front-end
+- React js
+- Boostrap
+- Taquito js
