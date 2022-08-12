@@ -1,6 +1,3 @@
-# tezos-land
-
-This repository contains sources for a boilerplate-NFT-game for Tezos blockchain called TezosLand. It is a gamified NFT  like Decentraland for Ethereum.
 
 ### Tezos Node install
 
