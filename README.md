@@ -3,7 +3,8 @@
 
 The Project is about creating a NFT MARKETPLACE using Tezos the following below website link will provide Insightful Analysis 
 
-https://starnftmarketplace.netlify.app/home
+https://starnftmarketplace.netlify.app
+
 
 
 Tezos Folder the place where Contracts are available
