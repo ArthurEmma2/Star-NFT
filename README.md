@@ -6,6 +6,8 @@ The Project is about creating a NFT MARKETPLACE using Tezos the following below 
 https://starnftmarketplace.netlify.app/home
 
 
+Tezos Folder the place where Contracts are available
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
