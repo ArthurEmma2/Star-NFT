@@ -12,7 +12,7 @@ import {connectWallet, getAccount} from '../../Utils/wallet'
 const NAV__LINKS = [
     {
         display: 'Home',
-        url: '/home' 
+        url: '/' 
     },
     {
         display: 'Market',

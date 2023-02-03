@@ -6,6 +6,8 @@ import './App.css'
 import App from "./App";
 import "bootstrap/dist/css/bootstrap.css";
 import "remixicon/fonts/remixicon.css";
+import "swiper/swiper.css";
+
 
 
 

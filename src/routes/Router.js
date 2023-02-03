@@ -13,8 +13,7 @@ import EditProfile from '../pages/EditProfile'
 
 function Router() {
   return <Routes>
-    <Route path='/' element={<Navigate to='/home'/>} />
-    <Route path='/home' element={<Home/>} />
+    <Route path='/' element={<Home/>} />
     <Route path='/contact' element={<Contact/>} />
     <Route path='/market/:id' element={<NftDetails/>} />
     <Route path='/market' element={<Market/>} />
