@@ -14,9 +14,6 @@ const [data, setData] = useState(NFT__DATA)
 
 
 
-const handleCategory = () =>{}
-
-
 const handleItems = () =>{}
 
 

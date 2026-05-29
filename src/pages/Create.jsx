@@ -43,7 +43,7 @@ function Create() {
   const [title, setTitle] = useState("");
   const [price, setPrice] = useState("");
   const [description, setDescription] = useState("");
-  const [selectFile,  setSelectFile] = useState(null);
+  const [, setSelectFile] = useState(null);
 
   function handleChange(e) {
     setSelectFile(e.target.files[0])
